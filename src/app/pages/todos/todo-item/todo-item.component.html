@@ -1,0 +1,33 @@
+<li class="list-group-item app-todo-item">
+  <header class="todo-header todos-item">
+    <div class="d-flex">
+      <span class="material-icons check-box" (click)="toggleTodo()">
+        {{(todo.isDone) ? 'check_box' : 'check_box_outline_blank'}}
+
+      </span>
+      <h5 [class.is-done]="todo.isDone" appHighlight>
+        {{todo.title}}
+      </h5>
+    </div>
+    <div class="todo-btn-group">
+      <button class="btn btn-outline-primary" [disabled]="!todo.description" (click)="toggleDetails()">
+        {{(!isShowDetails) ? 'Show details' : 'Hide details'}}
+      </button>
+      <button class="btn btn-outline-danger" (click)="deleteTodo(todo.id)">
+        Delete</button>
+    </div>
+
+  </header>
+  <div *ngIf="isShowDetails">
+    <p class="todo-description" *ngIf="todo.description">
+      {{todo.description}}
+    </p>
+  </div>
+
+</li>
+
+
+<!-- <p class="text-center"
+*ngIf="!appTodoItem"> Create list</p> -->
+
+<!-- {{(!todo) ? 'check_box' : 'check_box_outline_blank'}} -->

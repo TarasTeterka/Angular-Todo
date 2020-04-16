@@ -1,0 +1,17 @@
+<div id="wrap">
+  <app-header
+    [title]="headerTitle"
+    [subTitle]="headerSubTitle"
+    (testOutput)="testOutputApp($event)"
+  >
+  </app-header>
+ <app-navbar></app-navbar>
+
+<router-outlet> </router-outlet>
+
+  <!-- <app-todos> </app-todos> -->
+  <app-main> </app-main>
+</div>
+<app-footer>
+  <p>Copyright © 2020</p>
+</app-footer>

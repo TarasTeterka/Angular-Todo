@@ -1,0 +1,34 @@
+<div class="container app-todos">
+  <app-new-todo (newTodo)="addTodo($event)"></app-new-todo>
+  
+  <form>
+    <div class="form-group">
+      <input class="form-control"
+             name="search"
+             placeholder="Search..."
+             type="text"
+             autocomplete="off"
+             [(ngModel)]="search" />
+    </div>
+  </form>
+
+    <ul class="list-group list-group-flush"
+    *ngIf="todoList"
+    >
+     <p class="text-center"
+   *ngIf="todoList.length == 0"> No items, please create your first item.</p>
+  
+    <app-todo-item 
+                 *ngFor="let item of todoList | filterBySearch:search" 
+                 [todo]="item"
+                 (delete)="deleteTodo($event)"
+                 (update)="updateTodo($event)"
+                 >
+                
+    </app-todo-item>
+  </ul>
+  
+</div>
+<p class="text-center"
+   *ngIf="!todoList "> No Data.</p>
+  

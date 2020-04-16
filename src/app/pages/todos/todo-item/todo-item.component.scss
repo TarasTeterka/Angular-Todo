@@ -1,0 +1,28 @@
+.todos-item{
+  border-bottom: 1px solid #c1c1c1;
+  padding-bottom: 10px;
+}
+
+.is-done {
+    text-decoration: line-through;
+}
+
+.todo-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .check-box {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  .todo-btn-group button:last-child {
+    margin-left: 5px;
+  }
+  
+  .todo-description {
+    padding: 10px;
+    margin: 0;
+  }
