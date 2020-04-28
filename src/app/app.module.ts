@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -21,6 +23,7 @@ import { FilterByPriorityDirective } from './shared/pipes/filterByPriority/filte
 import { UserComponent } from './pages/about/user/user.component';
 import { AboutProjectComponent } from './pages/about/about-project/about-project.component';
 import { AboutUsComponent } from './pages/about/about-us/about-us.component';
+
 
 
 
@@ -50,7 +53,8 @@ import { AboutUsComponent } from './pages/about/about-us/about-us.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,8 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, TemplateRef } from '@angular/core';
 import { Todo } from 'src/app/core/interfaces';
 import { TodoService } from 'src/app/core/services/todo/todo.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-todos',
@@ -12,15 +13,21 @@ import { takeUntil } from 'rxjs/operators';
 export class TodosComponent implements OnInit, OnDestroy {
   todoList: Array<Todo>;
   search: string;
+  modalRef: BsModalRef;
   private unsubscribe = new Subject();
   constructor(
-    private todoService: TodoService
+    private todoService: TodoService,
+    private modalService: BsModalService
   ) {
 
   }
 
   ngOnInit(): void {
     this.getTodos();
+  }
+
+  openModal(template: TemplateRef<any>) {
+    this.modalRef = this.modalService.show(template);
   }
 
   ngOnDestroy(): void {

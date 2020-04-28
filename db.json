@@ -12,5 +12,34 @@
       "isDone": null,
       "id": 2
     }
+  ],
+  "users":[
+    {
+      "id": 1,
+      "firstName": "Landon",
+      "lastName": "Richards",
+      "picture": "https://randomuser.me/api/portraits/men/75.jpg",
+      "email": "landon.richards@example.com",
+      "phone": "(063)-777-9514",
+      "description": "Authoritatively innovate dynamic channels vis-a-vis user friendly resources. Objectively disseminate empowered best practices whereas standards compliant leadership skills. Authoritatively predominate B2B e-markets through premium networks. Assertively."
+    },
+    {
+      "id": 2,
+      "firstName": "Silke",
+      "lastName": "Nielsen",
+      "picture": "https://randomuser.me/api/portraits/women/45.jpg",
+      "email": "silke.nielsen@example.com",
+      "phone": "(093)-435-9234",
+      "description": "Synergistically morph emerging scenarios whereas superior e-business. Objectively empower enabled best practices without resource-leveling internal orsources. Dramatically brand prospective benefits with long-term high-impact resources. Energistically reconceptualize next-generation sources and proactive methodologies. Globally initiate cost effective quality vectors and interdependent web services."
+    },
+    {
+      "id": 3,
+      "firstName": "Lorenzo",
+      "lastName": "Mendez",
+      "picture": "https://randomuser.me/api/portraits/men/80.jpg",
+      "email": "silke.nielsen@example.com",
+      "phone": "(096)-787-1243",
+      "description": "Intrinsicly reintermediate equity invested content and unique best practices. Continually reintermediate proactive partnerships and global information. Proactively incubate holistic e-business after 24/365 networks. Credibly transition resource maximizing supply chains with robust testing procedures. "
+    }
   ]
 }
