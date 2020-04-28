@@ -18,6 +18,11 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { AboutComponent } from './pages/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FilterByPriorityDirective } from './shared/pipes/filterByPriority/filter-by-priority.directive';
+import { UserComponent } from './pages/about/user/user.component';
+import { AboutProjectComponent } from './pages/about/about-project/about-project.component';
+import { AboutUsComponent } from './pages/about/about-us/about-us.component';
+
+
 
 
 @NgModule({
@@ -35,7 +40,10 @@ import { FilterByPriorityDirective } from './shared/pipes/filterByPriority/filte
     PageNotFoundComponent,
     AboutComponent,
     NavbarComponent,
-    FilterByPriorityDirective
+    FilterByPriorityDirective,
+    UserComponent,
+    AboutProjectComponent,
+    AboutUsComponent,
   ],
   imports: [
     BrowserModule,
