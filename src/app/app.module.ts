@@ -19,10 +19,10 @@ import { AppRoutingModule } from './app.routing.module';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { AboutComponent } from './pages/about/about.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { FilterByPriorityDirective } from './shared/pipes/filterByPriority/filter-by-priority.directive';
 import { UserComponent } from './pages/about/user/user.component';
 import { AboutProjectComponent } from './pages/about/about-project/about-project.component';
 import { AboutUsComponent } from './pages/about/about-us/about-us.component';
+import { FilterByPriorityPipe } from './shared/pipes/filterByPriority/filter-by-priority.pipe';
 
 
 
@@ -43,10 +43,10 @@ import { AboutUsComponent } from './pages/about/about-us/about-us.component';
     PageNotFoundComponent,
     AboutComponent,
     NavbarComponent,
-    FilterByPriorityDirective,
     UserComponent,
     AboutProjectComponent,
     AboutUsComponent,
+    FilterByPriorityPipe,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +55,9 @@ import { AboutUsComponent } from './pages/about/about-us/about-us.component';
     ReactiveFormsModule,
     HttpClientModule,
     ModalModule.forRoot()
+  ],
+  entryComponents: [
+    NewTodoComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

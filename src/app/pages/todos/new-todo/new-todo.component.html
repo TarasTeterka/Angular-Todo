@@ -1,47 +1,91 @@
-<div class="app-new-todo">
-  <form [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <input
-        class="form-control"
-        type="text"
-        placeholder="Todo Title"
-        formControlName="title"
-        [class.is-invalid]="isSubmit && newTodoForm.get('title')"
-      />
-      <div
-        *ngIf="isSubmit && newTodoForm.get('title').invalid"
-        class="text-danger text-right"
-      >
-        <span *ngIf="newTodoForm.get('title').errors.required">
-          Input is required.</span
-        >
-        <span *ngIf="newTodoForm.controls.title.errors.minlength">
-          Input min length 3.</span
-        >
-      </div>
-      <!-- 2 variant: "get('title')" or "contols.title or controls['title']"  -->
-
-      <!-- <div *ngIf="newTodoForm.get('title').invalid &&
-       (newTodoForm.get('title').dirty || newTodoForm.get('title').touched) ">
-           <span *ngIf="newTodoForm.get('title').errors.required">Input is required.</span>
-           <span *ngIf="newTodoForm.get('title').errors.minlength">Input min length 3.</span>
-       </div> -->
-    </div>
-    <!-- class="invalid-feedback" -->
-    <!-- [ngStyle]="{'border': '2px solid red'}" -->
-    <div class="form-group">
-      <textarea
-        class="form-control"
-        rows="3"
-        placeholder="Todo Description"
-        formControlName="description"
-      >
-      </textarea>
-    </div>
-
-    <footer>
-      <!-- [disabled]="newTodoForm.invalid" -->
-      <button class="btn btn-primary savebtn" type="submit">Save</button>
-    </footer>
-  </form>
+<div class="modal-header">
+  <h4 class="modal-title pull-left">New Todo</h4>
+  <button type="button" class="close pull-right" aria-label="Close" (click)="hideModal()">
+    <span aria-hidden="true">&times;</span>
+  </button>
 </div>
+<div class="modal-body">
+  <div class="app-new-todo">
+    <form [formGroup]="newTodoForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <input class="form-control" type="text" placeholder="Todo Title" formControlName="title"
+          [class.is-invalid]="isSubmit && newTodoForm.get('title')" />
+        <div *ngIf="isSubmit && newTodoForm.get('title').invalid" class="text-danger text-right">
+          <span *ngIf="newTodoForm.get('title').errors.required">
+            Input is required.</span>
+          <span *ngIf="newTodoForm.controls.title.errors.minlength">
+            Input min length 3.</span>
+        </div>
+      </div>
+
+      <!-- 2 variant: "get('title')" or "contols.title or controls['title']" 
+    
+          <div *ngIf="newTodoForm.get('title').invalid &&
+           (newTodoForm.get('title').dirty || newTodoForm.get('title').touched) ">
+               <span *ngIf="newTodoForm.get('title').errors.required">Input is required.</span>
+               <span *ngIf="newTodoForm.get('title').errors.minlength">Input min length 3.</span>
+           </div>
+        
+        class="invalid-feedback"
+        [ngStyle]="{'border': '2px solid red'}"
+     -->
+     <!-- material-icons text-success iconPosition -->
+      <div class="form-group">
+        <textarea class="form-control" rows="3" placeholder="Todo Description" formControlName="description">
+          </textarea>
+      </div>
+     <div class="form-group col-12 row-1 d-flex ">
+      <div class="form-check form-check-inline formWidth">
+        <input class="form-check-input"
+         type="radio"
+         value="low"
+         formControlName="priority"
+         id="low">
+        <label class="form-check-label d-flex "
+         for="low">
+          <span class="text-success" >Low</span>
+        </label>
+      </div>
+
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input"
+         type="radio"
+         value="medium"
+         formControlName="priority"
+         id="medium">
+        <label class="form-check-label d-flex align-items-center"
+         for="medium">
+         <span class="text-warning" >Medium</span>
+        </label>
+      </div>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input"
+         type="radio"
+         value="hight"
+         formControlName="priority"
+         id="hight">
+        <label class="form-check-label d-flex align-items-center"
+         for="hight">
+         <span class="text-danger " >Hight</span>
+        </label>
+      </div>
+
+      <div *ngIf="isSubmit && newTodoForm.get('priority').invalid"
+      class="text-danger">
+      <span>Priority is required</span>
+    </div>
+  </div>
+      <footer>
+
+        <!-- [disabled]="newTodoForm.invalid" -->
+
+        <button class="btn btn-primary savebtn" type="submit">Save</button>
+      </footer>
+    </form>
+  </div>
+</div>
+
+
+

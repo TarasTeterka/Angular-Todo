@@ -1,18 +1,16 @@
-.user{
-    max-width: 250px;
+.user {
+  max-width: 250px;
 }
 
-.row{
-    margin-top: 20px
+.row {
+  margin-top: 20px
 }
 
-
-
-.textP{
-    margin-bottom: 5px;
-    display: block;
+.textP {
+  margin-bottom: 5px;
+  display: block;
   display: -webkit-box;
-  -webkit-line-clamp: 3; 
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;

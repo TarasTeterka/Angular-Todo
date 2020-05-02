@@ -5,15 +5,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class FilterByPriorityPipe implements PipeTransform {
 
-  transform(data: any, search: string): any{
-   console.log(search);
-   if (!search){
-      return data;
-    }
+  transform(data: any, searchPriority: string): any{
+    console.log(searchPriority);
+    if (!searchPriority){
+       return data;
+     }
 
-   return data.filter((el) => {
-    return el.title.toLowerCase().indexOf(search.toLowerCase()) > -1;
-  });
-  }
+    return data.filter((elem) => {
+     return elem.priority.toLowerCase().indexOf(searchPriority.toLowerCase()) > -1;
+   });
+   }
+
 
 }

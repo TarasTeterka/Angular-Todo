@@ -25,10 +25,10 @@ titleFontSize = '36px';
   ngOnDestroy(): void {
 
   }
-  logIn(event): void {
-    this.isLogined = !this.isLogined;
-    console.log('logIn', event);
-    this.testOutput.emit('Header login works');
-  }
+  // logIn(event): void {
+  //   this.isLogined = !this.isLogined;
+  //   console.log('logIn', event);
+  //   this.testOutput.emit('Header login works');
+  // }
 
 }

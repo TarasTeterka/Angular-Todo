@@ -3,12 +3,17 @@
     <div class="d-flex">
       <span class="material-icons check-box" (click)="toggleTodo()">
         {{(todo.isDone) ? 'check_box' : 'check_box_outline_blank'}}
-
       </span>
       <h5 [class.is-done]="todo.isDone" appHighlight>
         {{todo.title}}
       </h5>
-    </div>
+      <span class="badge" [innerHTML]="todo.priority" 
+      [ngClass]="{
+      'badge-success': todo.priority === 'low',
+      'badge-warning': todo.priority === 'medium',
+      'badge-danger': todo.priority === 'hight' 
+      }"> </span>
+     </div>
     <div class="todo-btn-group">
       <button class="btn btn-outline-primary" [disabled]="!todo.description" (click)="toggleDetails()">
         {{(!isShowDetails) ? 'Show details' : 'Hide details'}}

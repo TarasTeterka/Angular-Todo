@@ -1,19 +1,28 @@
 {
   "todos": [
     {
-      "title": "Learn JS",
+      "title": "Learn Js",
       "description": "Description",
+      "priority": "medium",
       "isDone": true,
       "id": 1
     },
     {
       "title": "Learn Angular",
-      "description": null,
-      "isDone": null,
+      "description": "",
+      "priority": "hight",
+      "isDone": false,
       "id": 2
+    },
+    {
+      "title": "Learn CSS",
+      "description": "",
+      "priority": "low",
+      "isDone": true,
+      "id": 3
     }
   ],
-  "users":[
+  "users": [
     {
       "id": 1,
       "firstName": "Landon",
