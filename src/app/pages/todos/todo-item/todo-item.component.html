@@ -18,6 +18,9 @@
       <button class="btn btn-outline-primary" [disabled]="!todo.description" (click)="toggleDetails()">
         {{(!isShowDetails) ? 'Show details' : 'Hide details'}}
       </button>
+      <button class="btn btn-outline-info" style="margin-left:5px" (click)="upTodo()">
+        Update
+      </button>
       <button class="btn btn-outline-danger" (click)="deleteTodo(todo.id)">
         Delete</button>
     </div>

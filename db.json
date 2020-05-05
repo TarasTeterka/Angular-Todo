@@ -1,32 +1,30 @@
 {
   "todos": [
     {
-      "title": "Learn Js",
-      "description": "Description",
+      "id": 1,
+      "title": "Learn JS",
+      "description": "\n\n",
       "priority": "medium",
-      "isDone": true,
-      "id": 1
+      "isDone": true
     },
     {
+      "id": 2,
       "title": "Learn Angular",
       "description": "",
-      "priority": "hight",
-      "isDone": false,
-      "id": 2
+      "priority": "hight"
     },
     {
+      "id": 3,
       "title": "Learn CSS",
       "description": "",
       "priority": "low",
-      "isDone": true,
-      "id": 3
+      "isDone": true
     },
     {
+      "id": 4,
       "title": "Do final project",
       "description": "",
-      "priority": "hight",
-      "isDone": false,
-      "id": 4
+      "priority": "hight"
     }
   ],
   "user": [

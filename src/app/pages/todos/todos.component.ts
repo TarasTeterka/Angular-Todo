@@ -48,8 +48,18 @@ export class TodosComponent implements OnInit, OnDestroy {
   updateTodo(todo: Todo): void {
     this.todoService.updateTodo(todo)
       .pipe(takeUntil(this.unsubscribe))
-      .subscribe();
+      .subscribe(() => {
+        this.getTodos();
+      });
   }
+
+  // updateTodo(todo: Todo): void {
+  //   console.log(todo);
+  //   this.todoService.updateTodo(todo)
+  //   .subscribe(() => {
+  //     this.getTodos();
+  //   });
+  // }
 
   deleteTodo(todoId: number): void {
     this.todoService.deleteTodo(todoId)

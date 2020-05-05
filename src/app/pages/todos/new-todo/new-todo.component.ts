@@ -14,7 +14,7 @@ export class NewTodoComponent implements OnInit {
   newTodoForm: FormGroup;
 isSubmit = false;
 
-
+mytodo: Todo;
 
   constructor(
     private modalRef: BsModalRef,
@@ -43,25 +43,44 @@ hideModal(){
   this.modalRef.hide();
 }
 
-
-  private createNewTodoForm(): void{
-this.newTodoForm = this.fb.group({
-  title: [
-    '',
-    [
-    Validators.required,
-    Validators.minLength(3)
-  ]
-  ],
-  description: [''],
-  priority: [
-    '',
-    Validators.required
-  ],
-  isDone: [false]
-});
-  }
-
-
-  submit(todo: Todo): void {}
+private createNewTodoForm(): void {
+  this.newTodoForm = this.fb.group({
+    id: [this.mytodo ? this.mytodo.id : null],
+    title: [
+      this.mytodo ? this.mytodo.title : '',
+      [Validators.required,
+            Validators.minLength(3)],
+    ],
+    description: [
+      this.mytodo ? this.mytodo.description : null,
+      [],
+    ],
+    priority: [this.mytodo ? this.mytodo.priority : '',
+     Validators.required],
+     isDone: [false]
+  });
 }
+submit(todo: Todo): void {}
+}
+
+//   private createNewTodoForm(): void{
+// this.newTodoForm = this.fb.group({
+//   title: [
+//     '',
+//     [
+//     Validators.required,
+//     Validators.minLength(3)
+//   ]
+//   ],
+//   description: [''],
+//   priority: [
+//     '',
+//     Validators.required
+//   ],
+//   isDone: [false]
+// });
+//   }
+
+
+//   submit(todo: Todo): void {}
+// }
