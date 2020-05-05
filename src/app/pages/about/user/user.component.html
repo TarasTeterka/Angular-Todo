@@ -1,1 +1,35 @@
-<p>user works! {{userId}}</p>
+
+<!-- <p>{{ userId }}</p> -->
+<!-- <div class="d-flex">
+  <div>
+    <div class="d-flex" style="width: 250px; height: 300px;">
+      <img src="{{ item.picture }}" class="card-img-top photo"/>
+      <div class="card-body">
+        <h2>{{ item.firstName}} {{ item.lastName }}</h2>
+        <p>{{ item.email }}</p>
+        <p>{{ item.phone }}</p>
+        <div class="card-text text-justify">
+          <p>{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="d-flex justify-content-center">
+<div class="d-flex flex-wrap">
+    <div class="mr-5">
+      <div class="card" style="max-width: 300px;">
+        <img src="{{item.picture}}" class="card-img-top" />
+        <div class="card-body">
+          <h2 class="card-title">{{ item.firstName}}  {{ item.lastName}}</h2>
+          <p>{{ item.email }}</p>
+          <p>{{ item.phone }}</p>
+          <div class="card-text text">
+            <div class="textP" ><p >{{ item.description }}</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

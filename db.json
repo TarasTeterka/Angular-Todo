@@ -20,9 +20,16 @@
       "priority": "low",
       "isDone": true,
       "id": 3
+    },
+    {
+      "title": "Do final project",
+      "description": "",
+      "priority": "hight",
+      "isDone": false,
+      "id": 4
     }
   ],
-  "users": [
+  "user": [
     {
       "id": 1,
       "firstName": "Landon",
@@ -45,7 +52,7 @@
       "id": 3,
       "firstName": "Lorenzo",
       "lastName": "Mendez",
-      "picture": "https://randomuser.me/api/portraits/men/80.jpg",
+      "picture": "https://randomuser.me/api/portraits/men/55.jpg",
       "email": "silke.nielsen@example.com",
       "phone": "(096)-787-1243",
       "description": "Intrinsicly reintermediate equity invested content and unique best practices. Continually reintermediate proactive partnerships and global information. Proactively incubate holistic e-business after 24/365 networks. Credibly transition resource maximizing supply chains with robust testing procedures. "

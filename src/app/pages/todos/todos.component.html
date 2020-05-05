@@ -5,40 +5,35 @@
     Create new Todo
   </button>
 
-
   <form class="row align-items-center col-11 justify-content-between">
     <div class="form-group col-6">
       <input class="form-control" name="search" placeholder="Search..." type="text" autocomplete="off"
         [(ngModel)]="search" />
     </div>
 
-
     <div class="btn-group btn-group-toggle col-2" style="margin-bottom: 7px;" data-toggle="buttons">
       <label class="btn btn-success">
         <input [(ngModel)]="searchPriority" value="low" type="radio" name="todo-priority" id="low" checked> Low
       </label>
       <label class="btn btn-warning">
-        <input  [(ngModel)]="searchPriority" value="medium" type="radio" name="todo-priority" id="medium"> Medium
+        <input [(ngModel)]="searchPriority" value="medium" type="radio" name="todo-priority" id="medium"> Medium
       </label>
       <label class="btn btn-danger">
         <input [(ngModel)]="searchPriority" value="hight" type="radio" name="todo-priority" id="hight"> Hight
       </label>
-      <label class="btn btn-secondary active">
+      <label class="btn btn-secondary">
         <input [(ngModel)]="searchPriority" type="radio" name="todo-priority" id="all"> All
       </label>
     </div>
 
   </form>
 
-
-
-
-  <ul class="list-group list-group-flush" 
-  *ngIf="todoList">
+  <ul class="list-group list-group-flush" *ngIf="todoList">
     <p class="text-center" *ngIf="todoList.length == 0"> No items, please create your first item.</p>
 
-    <app-todo-item class="todo-item" *ngFor="let item of todoList | filterBySearch:search | filterByPriority:searchPriority" [todo]="item" (delete)="deleteTodo($event)"
-      (update)="updateTodo($event)">
+    <app-todo-item class="todo-item"
+      *ngFor="let item of todoList | filterBySearch:search | filterByPriority:searchPriority" [todo]="item"
+      (delete)="deleteTodo($event)" (update)="updateTodo($event)">
 
     </app-todo-item>
   </ul>
