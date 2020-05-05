@@ -3,9 +3,9 @@
     {
       "id": 1,
       "title": "Learn JS",
-      "description": "\n\n",
+      "description": "Description",
       "priority": "medium",
-      "isDone": true
+      "isDone": false
     },
     {
       "id": 2,
